@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;1,300;1,400;1,500&family=Bellefair&family=Inconsolata:wght@500;600&family=Lato:wght@300;400;900&family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+@media (min-width: 320px) {
+    .bg-space {
+        height: 180vh;
+        width: 100%;
+        font-family: 'Barlow Condensed', sans-serif;
+        background-image: url('assets/img/starry-night-sky.jpg');
+        opacity: .8;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .content-tabs {
+        width: 100%;
+        display: flex;
+        margin-top: 150px;
+    }
+
+    .menu-text {
+        display: inline-block;
+        height: 19px;
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        color: #FFFFFF;
+        margin-left: 5px;
+    }
+
+    .opacity {
+        opacity: .8;
+    }
+
+    [data-content] {
+        display: none;
+    }
+
+    .active[data-content] {
+        display: block;
+    }
+
+    .line-nav {
+        display: none;
+    }
+
+    .navbar-brand {
+        top: 10px;
+        left: 10px;
+    }
+
+    .menu-desk input[type="checkbox"],
+    .menu-desk .fa-bars,
+    .menu-desk .fa-times {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: -82px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-desk .fa-bars,
+    .menu-desk .fa-times {
+        font-size: 35px;
+        pointer-events: none;
+        margin-top: 20px;
+    }
+
+    .menu-desk input[type="checkbox"] {
+        opacity: 0;
+    }
+
+    .menu-desk {
+        color: white;
+        position: relative;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        top: 11px;
+        margin-bottom: 40px;
+        left: 35px;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40.7742px);
+    }
+
+    .menu-desk p {
+        display: none;
+        margin-left: 10px;
+    }
+
+    .menu-desk input:checked~p {
+        display: block;
+    }
+
+    .menu-desk input:checked~.fa-bars {
+        display: none;
+    }
+
+    .menu-desk input:not(:checked)~.fa-times {
+        display: none;
+        background: none;
+        height: 250px;
+    }
+
+    .menu-desk p {
+        margin-right: 30px;
+        cursor: pointer;
+        color: #fff;
+        margin-top: 14px;
+    }
+
+    .tabs {
+        clear: both;
+        position: relative;
+        max-width: 650px;
+        margin: 0 auto;
+        display: flex;
+        padding-left: 21px;
+        margin-top: -284px;
+        width: 300px;
+    }
+
+    .tab {
+        width: 100px;
+    }
+
+    .tab label {
+        margin-right: 20px;
+        position: relative;
+        top: 0;
+        cursor: pointer;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .tab [type=radio] {
+        display: none;
+    }
+
+    .tab__content {
+        position: relative;
+        top: 130px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: opacity .2s cubic-bezier(.42, 0, .34, 1.01);
+        opacity: 0;
+    }
+
+    [type=radio]:checked~label {
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        z-index: 2;
+    }
+
+    [type=radio]:checked~label~.tab__content {
+        opacity: 1;
+    }
+
+    .pick-destination {
+        position: absolute;
+        height: 19px;
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.3px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-top: -330px;
+        margin-left: 37px;
+    }
+
+    .tab__content.mt-5 {
+        width: 250px;
+        text-align: center;
+    }
+
+    .title {
+        width: 187px;
+        height: 64px;
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 64px;
+        text-align: center;
+        color: #FFFFFF;
+        margin: auto;
+        margin-top: 123px
+    }
+
+    .description {
+        height: 165px;
+        width: 283px;
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        color: #D0D6F9;
+        margin: auto;
+    }
+
+    .line {
+        width: 240px;
+        height: 1px;
+        top: 245px;
+        background: #383B4B;
+        margin-top: 67px;
+        margin-left: 15px;
+    }
+
+    .travel-info {
+        display: flex;
+        width: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .distance,
+    .travel-time {
+        margin: auto;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .distance-date,
+    .est {
+        height: 17px;
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 53px;
+        text-align: center;
+        letter-spacing: 2.3625px;
+        text-transform: uppercase;
+        color: #D0D6F9;
+    }
+
+    .num {
+        height: 32px;
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .img-planet {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 43px;
+        mix-blend-mode: screen;
+        top: -83px;
+    }
+
+    .img-planet img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 375px) {
+    .menu-desk {
+        left: 74px;
+    }
+
+    .tabs {
+        width: 340px;
+        margin-left: 12px;
+    }
+
+    .pick-destination {
+        margin-left: 62px;
+    }
+
+    .img-planet {
+        left: 65px;
+    }
+
+    .line {
+        width: 263px;
+        margin-left: 39px;
+    }
+}
+
+@media (min-width: 425px) {
+
+    .menu-desk {
+        left: 0;
+        top: 62px;
+    }
+
+    .pick-destination {
+        margin-left: 65px;
+    }
+
+    .content-tabs {
+        margin-top: 176px;
+    }
+
+    .tabs {
+        width: 400px;
+        padding-left: 17px;
+    }
+
+    .img-planet {
+        left: 92px;
+    }
+
+    .line {
+        width: 300px;
+        margin-left: 45px;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-desk {
+        flex-direction: row;
+        background: none;
+        backdrop-filter: none;
+        height: 50px;
+        width: 550px;
+        margin-left: 0;
+        left: 0;
+        margin: auto;
+        top: 0;
+    }
+
+    .menu-desk p {
+        display: block;
+        margin: auto;
+    }
+
+    .logo-space {
+        margin-top: 47px;
+    }
+
+    .content-menu {
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40.7742px);
+        right: 0;
+        height: 96px;
+        width: 600px;
+        margin-top: 40px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line-nav {
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        left: 61px;
+        top: 79px;
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.25;
+        display: block;
+    }
+
+    .menu-desk .fa-bars,
+    .menu-desk .fa-times {
+        font-size: 35px;
+        pointer-events: none;
+        display: none;
+    }
+
+    .content-tabs {
+        width: 100%;
+        display: flex;
+        margin-top: 192px;
+    }
+
+    .pick-destination {
+        position: absolute;
+        height: 34px;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: 4.725px;
+        margin-left: 20px;
+    }
+
+    .tabs {
+        width: 400px;
+        padding-left: 453px;
+        margin-top: -236px;
+    }
+
+    .title {
+        margin-top: -71px;
+        margin-left: 498px;
+    }
+
+    .title:focus {
+        border: 2px solid #9dd6ff;
+        color: red;
+        background: red;
+    }
+
+    .description {
+        margin-left: 455px;
+        margin-top: 20px;
+    }
+
+    .img-planet {
+        left: 90px;
+        width: 344px;
+        margin-top: -35px;
+        rotate: 45deg;
+    }
+
+    .line {
+        width: 300px;
+        margin-left: 439px;
+    }
+
+    .travel-info {
+        margin-left: 433px;
+    }
+
+    #hamburguer {
+        display: none;
+    }
+
+    .t-short {
+        width: 40px;
+    }
+}
+
+@media (min-width: 820px) {
+    .line-nav {
+        width: 179px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-menu {
+        margin-left: 195px;
+        width: 803px;
+    }
+
+    .pick-destination {
+        position: absolute;
+        height: 34px;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 4.725px;
+        margin-left: 20px;
+    }
+
+    .menu-desk {
+        flex-direction: row;
+        height: 50px;
+        width: 700px;
+        margin-left: 0;
+        left: 0;
+        margin: auto;
+        top: 0;
+    }
+
+    .menu-desk p {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .line-nav {
+        width: 236px;
+        top: 80px;
+    }
+
+    .tabs {
+        width: 500px;
+        padding-left: 603px;
+        margin-top: -236px;
+    }
+
+    .tab__content {
+        position: relative;
+        top: 130px;
+        left: 145px;
+        right: 0;
+        bottom: 0;
+        transition: opacity .2s cubic-bezier(.42, 0, .34, 1.01);
+        opacity: 0;
+    }
+
+    .description {
+        width: 328px;
+    }
+
+    .img-planet {
+        left: 14px;
+        width: 400px;
+        rotate: 45deg;
+    }
+
+    .line {
+        width: 328px;
+        margin-left: 452px;
+        margin-top: 40px;
+    }
+
+    .travel-info {
+        margin-left: 437px;
+        width: 350px;
+        flex-direction: row;
+    }
+
+    .distance,
+    .travel-time {
+        margin-top: -20px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .line-nav {
+        width: 553px;
+        top: 80px;
+    }
+
+    .content-alltabs {
+        display: flex;
+        top: 80px;
+        margin-top: 211px;
+    }
+
+    .pick-destination {
+        margin-left: -171px;
+    }
+
+    .img-planet {
+        left: -270px;
+        width: 500px;
+        height: 500px;
+        rotate: 45deg;
+    }
+
+    .description {
+        width: 386px;
+    }
+}
